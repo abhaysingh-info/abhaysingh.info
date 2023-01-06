@@ -6,7 +6,6 @@ import '../styles/Home.module.css'
 import Introduction from '../components/Introduction'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-	faSun,
 	faMoon,
 	faHome,
 	faUser,
@@ -14,6 +13,11 @@ import {
 	faPen,
 	faLightbulb,
 } from '@fortawesome/free-solid-svg-icons'
+import About from '../components/About'
+import Skills from '../components/Skills'
+import Contact from '../components/Contact'
+import { CustomIntersectionObserver } from '../utils/IntersectionObserver'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,6 +34,13 @@ class Home extends React.Component<HomeProps, HomeState> {
 		title: 'Abhay Singh',
 		activeSlideIndex: 0,
 		currentTheme: 'dark',
+	}
+
+	setActiveSlideIndex(index: number) {
+		this.setState({
+			...this.state,
+			activeSlideIndex: index,
+		})
 	}
 
 	setTheme(theme: string) {
@@ -73,6 +84,8 @@ class Home extends React.Component<HomeProps, HomeState> {
 		},
 	]
 
+	observer?: IntersectionObserver
+
 	componentDidMount(): void {
 		const storageTheme = localStorage.getItem('theme')
 		if (storageTheme?.length) {
@@ -80,6 +93,42 @@ class Home extends React.Component<HomeProps, HomeState> {
 		} else {
 			this.setTheme(this.state.currentTheme)
 		}
+
+		// intersection observer
+		this.observer = CustomIntersectionObserver()
+
+		document
+			?.querySelectorAll('.left-animation')
+			.forEach((element: Element) => {
+				this.observer?.observe(element)
+			})
+		document
+			?.querySelectorAll('.right-animation')
+			.forEach((element: Element) => {
+				this.observer?.observe(element)
+			})
+		document?.querySelectorAll('.top-animation').forEach((element: Element) => {
+			this.observer?.observe(element)
+		})
+		document
+			?.querySelectorAll('.bottom-animation')
+			.forEach((element: Element) => {
+				this.observer?.observe(element)
+			})
+		document
+			?.querySelectorAll('.zoom-in-animation')
+			.forEach((element: Element) => {
+				this.observer?.observe(element)
+			})
+		document
+			?.querySelectorAll('.zoom-out-animation')
+			.forEach((element: Element) => {
+				this.observer?.observe(element)
+			})
+	}
+
+	componentWillUnmount(): void {
+		this.observer?.disconnect()
 	}
 
 	render() {
@@ -91,10 +140,11 @@ class Home extends React.Component<HomeProps, HomeState> {
 					<meta name="viewport" content="width=device-width, initial-scale=1" />
 					<link rel="icon" href="/favicon.ico" />
 				</Head>
-				<main className="overflow-y-auto max-h-screen bg-base-300">
-					<div className="accent-pyramid border-primary"></div>
+				<main className="overflow-hidden overflow-y-auto max-h-screen bg-base-100">
+					<div className="accent-pyramid border-primary left-animation"></div>
+					<div className="accent-pyramid-opposite border-primary right-animation"></div>
 					<div className="absolute right-0 mt-3 mr-6 z-50">
-						<button
+						<span
 							onClick={() => {
 								this.setTheme(
 									this.state.currentTheme === 'dark' ? 'light' : 'dark',
@@ -105,31 +155,10 @@ class Home extends React.Component<HomeProps, HomeState> {
 							<FontAwesomeIcon
 								icon={this.state.currentTheme === 'dark' ? faLightbulb : faMoon}
 								className="w-6 h-6 cursor-pointer"
-							/>
-						</button>
+							/>{' '}
+							<span className="hidden">toggle theme</span>
+						</span>
 					</div>
-					<nav>
-						<div className="btm-nav z-40 lg:hidden">
-							{this.links.map((obj, index) =>
-								obj.onSMScreen ? (
-									<a
-										className={
-											'text-primary ' +
-											(this.state.activeSlideIndex === obj.slideIndex
-												? 'active'
-												: '')
-										}
-										key={index}
-										href={'#page' + obj.slideIndex}
-									>
-										<FontAwesomeIcon icon={obj.icon} className="w-6 h-6" />
-									</a>
-								) : (
-									<></>
-								),
-							)}
-						</div>
-					</nav>
 					<nav className="fixed z-40 right-0 hidden lg:flex min-h-screen items-center p-3">
 						<ul className="menu gap-4 p-2 rounded-box h-1/2 ">
 							{this.links.map((obj, index) =>
@@ -138,7 +167,7 @@ class Home extends React.Component<HomeProps, HomeState> {
 										key={index}
 										className="group flex items-end text-primary-content"
 									>
-										<a
+										<Link
 											className={
 												'btn group-hover:bg-primary-focus transition-all duration-300' +
 												' ' +
@@ -146,16 +175,16 @@ class Home extends React.Component<HomeProps, HomeState> {
 													? 'bg-primary'
 													: '')
 											}
-											// style={{
-											// 	borderRadius: '50%',
-											// }}
+											onClick={() => {
+												this.setActiveSlideIndex(obj.slideIndex)
+											}}
 											href={'/#page' + obj.slideIndex}
 										>
 											<span className="uppercase tracking-wider hidden group-hover:flex ">
 												{obj.title}{' '}
 											</span>{' '}
 											<FontAwesomeIcon icon={obj.icon} className="w-4 h-4" />
-										</a>
+										</Link>
 									</li>
 								) : (
 									<></>
@@ -163,18 +192,18 @@ class Home extends React.Component<HomeProps, HomeState> {
 							)}
 						</ul>
 					</nav>
-					<section>
-						<div id="page0">
+					<section className="mx-auto">
+						<div className="mb-16" id="page0">
 							<Introduction />
 						</div>
-						<div id="page1" className="bg-base-100">
-							<Introduction />
+						<div className="lg:w-10/12 mx-auto mb-16" id="page1">
+							<About />
 						</div>
-						<div id="page2">
-							<Introduction />
+						<div className="lg:w-10/12 mx-auto mb-16" id="page2">
+							<Skills />
 						</div>
-						<div id="page3" className="bg-base-100">
-							<Introduction />
+						<div className="lg:w-10/12 mx-auto mb-16" id="page3">
+							<Contact />
 						</div>
 					</section>
 				</main>

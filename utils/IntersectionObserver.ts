@@ -19,6 +19,10 @@ const animationClasses = [
 		targetClass: 'zoom-in-animation',
 		animationClass: 'zoom-in',
 	},
+	{
+		targetClass: 'zoom-out-animation',
+		animationClass: 'zoom-out',
+	},
 ]
 
 export const CustomIntersectionObserver = () =>
@@ -33,7 +37,7 @@ export const CustomIntersectionObserver = () =>
 							element.classList.add(animation.animationClass)
 							return // if we added the class, exit the function
 						}
-						element.classList.remove(animation.animationClass)
+						// element.classList.remove(animation.animationClass)
 						return // if we added the class, exit the function
 					}
 				}

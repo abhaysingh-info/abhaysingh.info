@@ -5,6 +5,7 @@ import Image from 'next/image'
 import AbhaySinghImage from '../public/me.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link'
 
 interface IntroductionProps {}
 
@@ -33,8 +34,6 @@ class Introduction extends React.Component<
 		activeTaglinePostfixIndex: 0,
 	}
 
-	observer?: IntersectionObserver
-
 	taglineChangeInterval: any
 
 	componentDidMount(): void {
@@ -48,45 +47,12 @@ class Introduction extends React.Component<
 						: 0,
 			})
 		}, 4000)
-
-		this.observer = CustomIntersectionObserver()
-		document.querySelectorAll('.top-animation').forEach((element: Element) => {
-			this.observer?.observe(element)
-		})
-		document
-			.querySelectorAll('.bottom-animation')
-			.forEach((element: Element) => {
-				this.observer?.observe(element)
-			})
-		document.querySelectorAll('.left-animation').forEach((element: Element) => {
-			this.observer?.observe(element)
-		})
-		document
-			.querySelectorAll('.right-animation')
-			.forEach((element: Element) => {
-				this.observer?.observe(element)
-			})
-		document
-			.querySelectorAll('.right-animation')
-			.forEach((element: Element) => {
-				this.observer?.observe(element)
-			})
-		document
-			.querySelectorAll('.zoom-in-animation')
-			.forEach((element: Element) => {
-				this.observer?.observe(element)
-			})
-	}
-
-	componentWillUnmount(): void {
-		this.observer?.disconnect()
-		clearInterval(this.taglineChangeInterval)
 	}
 
 	render() {
 		return (
 			<>
-				<div className="grid grid-cols-1 lg:grid-cols-11 w-full min-h-screen justify-center items-center ">
+				<div className="grid grid-cols-1 lg:grid-cols-11 w-full min-h-screen justify-center items-center relative overflow-hidden">
 					<div className="order-last lg:order-first lg:col-span-4 min-h-screen flex items-center justify-center">
 						<Image
 							src={AbhaySinghImage}
@@ -98,8 +64,7 @@ class Introduction extends React.Component<
 					<div className="lg:col-span-7 min-h-screen flex items-center justify-start ">
 						<div className="ml-8">
 							<h1 className="top-animation text-6xl lg:text-5xl tracking-wide cfont-extra-bold uppercase text-base-content ">
-								I'm{' '}
-								<span className="text-primary-focus">{this.state.name}</span>
+								I&apos;m <span className="text-primary">{this.state.name}</span>
 							</h1>
 							<span className="inline-block w-20 h-0.5 bg-base-content mb-0"></span>
 							<h2 className="right-animation text-3xl lg:text-2xl tracking-wide cfont-light text-accent-content">
@@ -122,13 +87,16 @@ class Introduction extends React.Component<
 							</h2>
 							<div className="mt-8">
 								<div className="bottom-animation">
-									<button className="btn gap-2 btn-accent btn-outline rounded-2xl">
+									<Link
+										className="btn gap-2 btn-accent btn-outline rounded-2xl"
+										href="/#page1"
+									>
 										More about me{' '}
 										<FontAwesomeIcon
 											icon={faArrowAltCircleRight}
 											className="h-6 w-6"
 										/>
-									</button>
+									</Link>
 								</div>
 							</div>
 						</div>
