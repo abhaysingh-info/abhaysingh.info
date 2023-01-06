@@ -32,7 +32,7 @@ class Home extends React.Component<HomeProps, HomeState> {
 	state = {
 		title: 'Abhay Singh',
 		activeSlideIndex: 0,
-		currentTheme: 'dark',
+		currentTheme: 'light',
 	}
 
 	setActiveSlideIndex(index: number) {
