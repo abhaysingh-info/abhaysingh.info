@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,500&display=swap');
+
+body {
+	min-height: 100vh;
+	font-family: 'Poppins';
+	font-weight: 500;
+}
+
+.cfont-extra-light {
+	font-family: 'Poppins';
+	font-weight: 300;
+}
+
+.cfont-light {
+	font-family: 'Poppins';
+	font-weight: 400;
+}
+
+.cfont-regular {
+	font-family: 'Poppins';
+	font-weight: 500;
+}
+
+.cfont-bold {
+	font-family: 'Poppins';
+	font-weight: 700;
+}
+.cfont-extra-bold {
+	font-family: 'Poppins';
+	font-weight: 900;
+}
+
+@media only screen and (min-width: 1024px) {
+	.accent-pyramid {
+		content: ' ';
+		display: block;
+		border-left: 0vw solid transparent;
+		border-right: 13vw solid transparent;
+		border-bottom: 100vh solid hsl(var(--p));
+		width: 25vw;
+		position: absolute;
+		top: 0px;
+		bottom: 0px;
+		left: 0px;
+		right: 0px;
+		z-index: 0;
+	}
+}
+@media (prefers-reduced-motion: no-preference) {
+	.top-to-initial,
+	.bottom-to-initial,
+	.left-to-initial,
+	.right-to-initial {
+		animation-duration: 0.75s;
+		animation-timing-function: ease-in;
+		animation-direction: linear;
+	}
+
+	.top-to-initial {
+		animation-name: topToInitial;
+	}
+
+	.bottom-to-initial {
+		animation-name: bottomToInitial;
+	}
+
+	.left-to-initial {
+		animation-name: leftToInitial;
+	}
+
+	.right-to-initial {
+		animation-name: rightToInitial;
+	}
+
+	@keyframes topToInitial {
+		0% {
+			transform: translateY(-100%);
+		}
+
+		100% {
+			transform: translateY(0%);
+		}
+	}
+	@keyframes bottomToInitial {
+		0% {
+			transform: translateY(100%);
+		}
+
+		100% {
+			transform: translateY(0%);
+		}
+	}
+
+	@keyframes leftToInitial {
+		0% {
+			transform: translateX(-100%);
+		}
+
+		100% {
+			transform: translateX(0%);
+		}
+	}
+	@keyframes rightToInitial {
+		0% {
+			transform: translateX(100%);
+		}
+
+		100% {
+			transform: translateX(0%);
+		}
+	}
+}
+
+.zoom-in,
+.zoom-out {
+	animation-duration: 1s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: none;
+	animation-play-state: running;
+}
+.zoom-in {
+	animation-name: zoomIn;
+}
+.zoom-out {
+	animation-name: zoomOut;
+}
+@keyframes zoomIn {
+	0% {
+		opacity: 0;
+		transform: scale3d(0.3, 0.3, 0.3);
+	}
+	50% {
+		opacity: 1;
+	}
+}
+@keyframes zoomOut {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+		transform: scale3d(0.3, 0.3, 0.3);
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+.is-visible {
+	display: inline-block;
+}
+
+.is-hidden {
+	display: none;
+}
