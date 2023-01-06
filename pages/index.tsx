@@ -1,9 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
-
 import { Inter } from '@next/font/google'
 import '../styles/Home.module.css'
-import Introduction from '../components/Introduction'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
 	faMoon,
@@ -13,6 +11,7 @@ import {
 	faPen,
 	faLightbulb,
 } from '@fortawesome/free-solid-svg-icons'
+import Introduction from '../components/Introduction'
 import About from '../components/About'
 import Skills from '../components/Skills'
 import Contact from '../components/Contact'
@@ -86,7 +85,7 @@ class Home extends React.Component<HomeProps, HomeState> {
 
 	observer?: IntersectionObserver
 
-	componentDidMount(): void {
+	async componentDidMount() {
 		const storageTheme = localStorage.getItem('theme')
 		if (storageTheme?.length) {
 			this.setTheme(storageTheme)
@@ -97,34 +96,39 @@ class Home extends React.Component<HomeProps, HomeState> {
 		// intersection observer
 		this.observer = CustomIntersectionObserver()
 
-		document
-			?.querySelectorAll('.left-animation')
-			.forEach((element: Element) => {
-				this.observer?.observe(element)
-			})
-		document
-			?.querySelectorAll('.right-animation')
-			.forEach((element: Element) => {
-				this.observer?.observe(element)
-			})
-		document?.querySelectorAll('.top-animation').forEach((element: Element) => {
-			this.observer?.observe(element)
-		})
-		document
-			?.querySelectorAll('.bottom-animation')
-			.forEach((element: Element) => {
-				this.observer?.observe(element)
-			})
-		document
-			?.querySelectorAll('.zoom-in-animation')
-			.forEach((element: Element) => {
-				this.observer?.observe(element)
-			})
-		document
-			?.querySelectorAll('.zoom-out-animation')
-			.forEach((element: Element) => {
-				this.observer?.observe(element)
-			})
+		const documentExecutor = async () => {
+			document
+				?.querySelectorAll('.left-animation')
+				.forEach((element: Element) => {
+					this.observer?.observe(element)
+				})
+			document
+				?.querySelectorAll('.right-animation')
+				.forEach((element: Element) => {
+					this.observer?.observe(element)
+				})
+			document
+				?.querySelectorAll('.top-animation')
+				.forEach((element: Element) => {
+					this.observer?.observe(element)
+				})
+			document
+				?.querySelectorAll('.bottom-animation')
+				.forEach((element: Element) => {
+					this.observer?.observe(element)
+				})
+			document
+				?.querySelectorAll('.zoom-in-animation')
+				.forEach((element: Element) => {
+					this.observer?.observe(element)
+				})
+			document
+				?.querySelectorAll('.zoom-out-animation')
+				.forEach((element: Element) => {
+					this.observer?.observe(element)
+				})
+		}
+		documentExecutor()
 	}
 
 	componentWillUnmount(): void {

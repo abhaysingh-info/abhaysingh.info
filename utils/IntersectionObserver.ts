@@ -25,23 +25,27 @@ const animationClasses = [
 	},
 ]
 
+const entriesExecutor = async (entries: any) => {
+	entries.forEach((entry: any) => {
+		const element = entry.target
+
+		for (let animation of animationClasses) {
+			if (element.classList.contains(animation.targetClass)) {
+				if (entry.isIntersecting) {
+					element.classList.add(animation.animationClass)
+					return // if we added the class, exit the function
+				}
+				// element.classList.remove(animation.animationClass)
+				return // if we added the class, exit the function
+			}
+		}
+	})
+}
+
 export const CustomIntersectionObserver = () =>
 	new IntersectionObserver(
 		(entries) => {
-			entries.forEach((entry) => {
-				const element = entry.target
-
-				for (let animation of animationClasses) {
-					if (element.classList.contains(animation.targetClass)) {
-						if (entry.isIntersecting) {
-							element.classList.add(animation.animationClass)
-							return // if we added the class, exit the function
-						}
-						// element.classList.remove(animation.animationClass)
-						return // if we added the class, exit the function
-					}
-				}
-			})
+			entriesExecutor(entries)
 		},
 		{ threshold: 0 },
 	)

@@ -93,7 +93,7 @@ class Contact extends React.Component<ContactProps, ContactState> {
 						</div>
 						<div className="mt-4 flex justify-center gap-5">
 							{this.state.social.map((obj, index) => (
-								<a key={index} href={obj.url} target="_blank">
+								<a key={index} href={obj.url} target="_blank" rel="noreferrer">
 									<FontAwesomeIcon
 										icon={obj.icon}
 										className="w-8 h-8 hover:text-primary"
