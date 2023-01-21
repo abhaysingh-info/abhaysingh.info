@@ -25,7 +25,7 @@ const animationClasses = [
 	},
 ]
 
-const entriesExecutor = async (entries: any) => {
+export const toggleAnimationExecutor = async (entries: any) => {
 	entries.forEach((entry: any) => {
 		const element = entry.target
 
@@ -42,10 +42,10 @@ const entriesExecutor = async (entries: any) => {
 	})
 }
 
-export const CustomIntersectionObserver = () =>
-	new IntersectionObserver(
-		(entries) => {
-			entriesExecutor(entries)
-		},
-		{ threshold: 0 },
-	)
+export const CustomIntersectionObserver = (
+	fn: Function,
+	options = { threshold: 0 },
+) =>
+	new IntersectionObserver((entries) => {
+		fn(entries)
+	}, options)
