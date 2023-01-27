@@ -163,6 +163,15 @@ class Home extends React.Component<HomeProps, HomeState> {
 					<meta property="og:url" content="https://abhaysingh.info/" />
 					<meta property="og:type" content="website" />
 					<link rel="icon" href="/favicon.ico" />
+					<script
+						async
+						src="https://www.googletagmanager.com/gtag/js?id=G-PDNT6DYHXS"
+					></script>
+					<script>
+						window.dataLayer = window.dataLayer || []; function gtag()
+						{dataLayer.push(arguments)}
+						gtag('js', new Date()); gtag('config', 'G-PDNT6DYHXS');
+					</script>
 				</Head>
 				<main className="overflow-hidden overflow-y-auto max-h-screen bg-base-100">
 					<div className="accent-pyramid border-primary left-animation"></div>
