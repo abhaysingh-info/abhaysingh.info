@@ -164,10 +164,10 @@ class Home extends React.Component<HomeProps, HomeState> {
 					<meta property="og:type" content="website" />
 					<link rel="icon" href="/favicon.ico" />
 					<script
-						async
 						src="https://www.googletagmanager.com/gtag/js?id=G-PDNT6DYHXS"
+						defer
 					></script>
-					<script>
+					<script defer>
 						window.dataLayer = window.dataLayer || []; function gtag()
 						{dataLayer.push(arguments)}
 						gtag('js', new Date()); gtag('config', 'G-PDNT6DYHXS');
