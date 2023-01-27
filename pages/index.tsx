@@ -164,7 +164,9 @@ class Home extends React.Component<HomeProps, HomeState> {
 					<meta property="og:url" content="https://abhaysingh.info/" />
 					<meta property="og:type" content="website" />
 					<link rel="icon" href="/favicon.ico" />
-					<Script
+					
+				</Head>
+				<Script
 						src="https://www.googletagmanager.com/gtag/js?id=G-PDNT6DYHXS"
 						strategy="afterInteractive"
 					></Script>
@@ -177,7 +179,6 @@ class Home extends React.Component<HomeProps, HomeState> {
 							gtag('js', new Date()); gtag('config', 'G-PDNT6DYHXS');`,
 						}}
 					></Script>
-				</Head>
 				<main className="overflow-hidden overflow-y-auto max-h-screen bg-base-100">
 					<div className="accent-pyramid border-primary left-animation"></div>
 					<div className="accent-pyramid-opposite border-primary right-animation"></div>
