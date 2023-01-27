@@ -20,6 +20,7 @@ import {
 	toggleAnimationExecutor,
 } from '../utils/IntersectionObserver'
 import Link from 'next/link'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -163,15 +164,19 @@ class Home extends React.Component<HomeProps, HomeState> {
 					<meta property="og:url" content="https://abhaysingh.info/" />
 					<meta property="og:type" content="website" />
 					<link rel="icon" href="/favicon.ico" />
-					<script
+					<Script
 						src="https://www.googletagmanager.com/gtag/js?id=G-PDNT6DYHXS"
-						defer
-					></script>
-					<script defer>
-						window.dataLayer = window.dataLayer || []; function gtag()
-						{dataLayer.push(arguments)}
-						gtag('js', new Date()); gtag('config', 'G-PDNT6DYHXS');
-					</script>
+						strategy="afterInteractive"
+					></Script>
+					<Script
+						id="google-analytics"
+						strategy="afterInteractive"
+						dangerouslySetInnerHTML={{
+							__html: `window.dataLayer = window.dataLayer || []; function gtag()
+							{dataLayer.push(arguments)}
+							gtag('js', new Date()); gtag('config', 'G-PDNT6DYHXS');`,
+						}}
+					></Script>
 				</Head>
 				<main className="overflow-hidden overflow-y-auto max-h-screen bg-base-100">
 					<div className="accent-pyramid border-primary left-animation"></div>
