@@ -11,23 +11,10 @@ class RadialProgress extends React.Component<
 	RadialProgressProps,
 	RadialProgressState
 > {
-	state = { value: 0 }
+	state = { value: this.props.value }
 
 	interval: any
 
-	componentDidMount(): void {
-		let stateInitialValue = 0
-		this.interval = setInterval(() => {
-			stateInitialValue += 1
-			if (stateInitialValue > this.props.value) {
-				return clearInterval(this.interval)
-			}
-			this.setState({
-				...this.state,
-				value: stateInitialValue,
-			})
-		}, 2)
-	}
 	render() {
 		return (
 			<div className="flex flex-col justify-center items-center gap-3 ">
