@@ -63,6 +63,7 @@ class Home extends React.Component<HomeProps, HomeState> {
 			onSMScreen: true,
 			onLGScreen: true,
 			title: 'Home',
+			url: '/#home',
 		},
 		{
 			icon: faUser,
@@ -70,6 +71,7 @@ class Home extends React.Component<HomeProps, HomeState> {
 			onSMScreen: true,
 			onLGScreen: true,
 			title: 'About',
+			url: '/#about',
 		},
 		{
 			icon: faPen,
@@ -77,6 +79,7 @@ class Home extends React.Component<HomeProps, HomeState> {
 			onSMScreen: true,
 			onLGScreen: true,
 			title: 'Skills',
+			url: '/#skills',
 		},
 		{
 			icon: faEnvelopeOpen,
@@ -84,6 +87,7 @@ class Home extends React.Component<HomeProps, HomeState> {
 			onSMScreen: true,
 			onLGScreen: true,
 			title: 'Connect',
+			url: '/#contact',
 		},
 	]
 
@@ -164,9 +168,9 @@ class Home extends React.Component<HomeProps, HomeState> {
 					<meta property="og:url" content="https://abhaysingh.info/" />
 					<meta property="og:type" content="website" />
 					<link rel="icon" href="/favicon.ico" />
-					
 				</Head>
-				<Script
+				<>
+					<Script
 						src="https://www.googletagmanager.com/gtag/js?id=G-PDNT6DYHXS"
 						strategy="afterInteractive"
 					></Script>
@@ -179,6 +183,7 @@ class Home extends React.Component<HomeProps, HomeState> {
 							gtag('js', new Date()); gtag('config', 'G-PDNT6DYHXS');`,
 						}}
 					></Script>
+				</>
 				<main className="overflow-hidden overflow-y-auto max-h-screen bg-base-100">
 					<div className="accent-pyramid border-primary left-animation"></div>
 					<div className="accent-pyramid-opposite border-primary right-animation"></div>
@@ -217,7 +222,7 @@ class Home extends React.Component<HomeProps, HomeState> {
 											onClick={() => {
 												this.setActiveSlideIndex(obj.slideIndex)
 											}}
-											href={'/#page' + obj.slideIndex}
+											href={obj.url}
 										>
 											<span className="uppercase tracking-wider hidden group-hover:flex ">
 												{obj.title}{' '}
@@ -232,16 +237,16 @@ class Home extends React.Component<HomeProps, HomeState> {
 						</ul>
 					</nav>
 					<section className="mx-auto">
-						<div className="mb-16" id="page0">
+						<div className="mb-16" id="home">
 							<Introduction />
 						</div>
-						<div className="lg:w-10/12 mx-auto mb-16" id="page1">
+						<div className="lg:w-10/12 mx-auto mb-16" id="about">
 							<About />
 						</div>
-						<div className="lg:w-10/12 mx-auto mb-16" id="page2">
+						<div className="lg:w-10/12 mx-auto mb-16" id="skills">
 							<Skills />
 						</div>
-						<div className="lg:w-10/12 mx-auto mb-16" id="page3">
+						<div className="lg:w-10/12 mx-auto mb-16" id="contact">
 							<Contact />
 						</div>
 					</section>
