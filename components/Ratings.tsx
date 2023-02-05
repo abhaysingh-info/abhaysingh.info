@@ -22,8 +22,8 @@ class Ratings extends React.Component<RatingsProps, RatingsState> {
 			<div className="w-full min-h-screen relative overflow-hidden flex flex-col justify-center items-center">
 				<div className="carousel carousel-center w-full p-4 space-x-4 rounded-box">
 					{this.state.ratings.map((obj, index) => (
-						<div className="carousel-item">
-							<ClientRating rating={obj} key={index} />
+						<div className="carousel-item" key={index}>
+							<ClientRating rating={obj} />
 						</div>
 					))}
 				</div>

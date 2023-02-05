@@ -25,7 +25,6 @@ class ClientRating extends React.Component<
 			console.log(i === this.state.rating.stars)
 			output.push(
 				<input
-					key={i}
 					type="radio"
 					name={
 						'rating-' +
