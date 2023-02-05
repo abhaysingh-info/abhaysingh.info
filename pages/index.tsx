@@ -10,10 +10,12 @@ import {
 	faEnvelopeOpen,
 	faPen,
 	faLightbulb,
+	faStar,
 } from '@fortawesome/free-solid-svg-icons'
 import Introduction from '../components/Introduction'
 import About from '../components/About'
 import Skills from '../components/Skills'
+import Ratings from '../components/Ratings'
 import Contact from '../components/Contact'
 import {
 	CustomIntersectionObserver,
@@ -59,7 +61,6 @@ class Home extends React.Component<HomeProps, HomeState> {
 	links = [
 		{
 			icon: faHome,
-			slideIndex: 0,
 			onSMScreen: true,
 			onLGScreen: true,
 			title: 'Home',
@@ -67,7 +68,6 @@ class Home extends React.Component<HomeProps, HomeState> {
 		},
 		{
 			icon: faUser,
-			slideIndex: 1,
 			onSMScreen: true,
 			onLGScreen: true,
 			title: 'About',
@@ -75,15 +75,20 @@ class Home extends React.Component<HomeProps, HomeState> {
 		},
 		{
 			icon: faPen,
-			slideIndex: 2,
 			onSMScreen: true,
 			onLGScreen: true,
 			title: 'Skills',
 			url: '/#skills',
 		},
 		{
+			icon: faStar,
+			onSMScreen: true,
+			onLGScreen: true,
+			title: 'Ratings',
+			url: '/#ratings',
+		},
+		{
 			icon: faEnvelopeOpen,
-			slideIndex: 3,
 			onSMScreen: true,
 			onLGScreen: true,
 			title: 'Connect',
@@ -215,12 +220,12 @@ class Home extends React.Component<HomeProps, HomeState> {
 											className={
 												'btn group-hover:bg-primary-focus transition-all duration-300' +
 												' ' +
-												(this.state.activeSlideIndex === obj.slideIndex
+												(this.state.activeSlideIndex === index
 													? 'bg-primary'
 													: '')
 											}
 											onClick={() => {
-												this.setActiveSlideIndex(obj.slideIndex)
+												this.setActiveSlideIndex(index)
 											}}
 											href={obj.url}
 										>
@@ -245,6 +250,9 @@ class Home extends React.Component<HomeProps, HomeState> {
 						</div>
 						<div className="lg:w-10/12 mx-auto mb-16" id="skills">
 							<Skills />
+						</div>
+						<div className="lg:w-10/12 mx-auto mb-16" id="ratings">
+							<Ratings />
 						</div>
 						<div className="lg:w-10/12 mx-auto mb-16" id="contact">
 							<Contact />
