@@ -24,19 +24,18 @@ class ClientRating extends React.Component<
 		for (let i = 1; i <= 5; i++) {
 			console.log(i === this.state.rating.stars)
 			output.push(
-				<>
-					<input
-						type="radio"
-						name={
-							'rating-' +
-							this.state.rating.name.split(' ').join('') +
-							this.state.rating.stars
-						}
-						className="mask mask-star-2 bg-orange-400"
-						checked={i === this.state.rating.stars}
-						disabled
-					/>
-				</>,
+				<input
+					key={i}
+					type="radio"
+					name={
+						'rating-' +
+						this.state.rating.name.split(' ').join('') +
+						this.state.rating.stars
+					}
+					className="mask mask-star-2 bg-orange-400"
+					checked={i === this.state.rating.stars}
+					disabled
+				/>,
 			)
 		}
 		return output
