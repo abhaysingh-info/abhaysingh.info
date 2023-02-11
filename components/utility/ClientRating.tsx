@@ -19,10 +19,8 @@ class ClientRating extends React.Component<
 	}
 
 	getStars = () => {
-		console.log(this.state.rating)
 		let output = []
 		for (let i = 1; i <= 5; i++) {
-			console.log(i === this.state.rating.stars)
 			output.push(
 				<input
 					type="radio"
