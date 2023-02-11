@@ -40,6 +40,7 @@ class ContactForm extends React.Component<ContactFormProps, ContactFormState> {
 						"Thank you for contacting Me, I'll reach to you ASAP.",
 					formSubmitErrorMessage: '',
 				})
+				myForm.reset()
 				setTimeout(() => {
 					this.resetSubmitMessage()
 				}, 5000)
@@ -50,6 +51,7 @@ class ContactForm extends React.Component<ContactFormProps, ContactFormState> {
 					formSubmitErrorMessage:
 						'Unable to submit form, please reset it again!',
 				})
+				myForm.reset()
 				setTimeout(() => {
 					this.resetSubmitMessage()
 				}, 5000)
@@ -61,6 +63,7 @@ class ContactForm extends React.Component<ContactFormProps, ContactFormState> {
 			<form
 				name="contact"
 				method="POST"
+				action="/"
 				data-netlify="true"
 				onSubmit={this.handleSubmit}
 			>
