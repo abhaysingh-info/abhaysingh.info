@@ -29,7 +29,7 @@ class ContactForm extends React.Component<ContactFormProps, ContactFormState> {
 
 		console.log(new URLSearchParams(formData as any).toString())
 
-		fetch('/', {
+		fetch('./', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
 			body: new URLSearchParams(formData as any).toString(),
@@ -63,7 +63,6 @@ class ContactForm extends React.Component<ContactFormProps, ContactFormState> {
 			<form
 				name="contact"
 				method="POST"
-				action="/"
 				data-netlify="true"
 				onSubmit={this.handleSubmit}
 			>
