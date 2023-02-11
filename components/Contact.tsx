@@ -96,7 +96,7 @@ class Contact extends React.Component<ContactProps, ContactState> {
 								<a key={index} href={obj.url} target="_blank" rel="noreferrer">
 									<FontAwesomeIcon
 										icon={obj.icon}
-										className="w-8 h-8 hover:text-primary"
+										className="w-8 h-8 hover:text-primary hover:scale-125"
 									/>
 								</a>
 							))}

@@ -199,7 +199,7 @@ class Home extends React.Component<HomeProps, HomeState> {
 									this.state.currentTheme === 'dark' ? 'light' : 'dark',
 								)
 							}}
-							className="btn flex w-12 h-12 rounded-full items-center justify-center"
+							className="btn flex w-12 h-12 rounded-full items-center justify-center hover:scale-125"
 						>
 							<FontAwesomeIcon
 								icon={this.state.currentTheme === 'dark' ? faLightbulb : faMoon}
@@ -218,7 +218,7 @@ class Home extends React.Component<HomeProps, HomeState> {
 									>
 										<Link
 											className={
-												'btn group-hover:bg-primary-focus transition-all duration-300' +
+												'btn group-hover:bg-primary-focus group-hover:scale-125 transition-all duration-300' +
 												' ' +
 												(this.state.activeSlideIndex === index
 													? 'bg-primary'
@@ -229,9 +229,9 @@ class Home extends React.Component<HomeProps, HomeState> {
 											}}
 											href={obj.url}
 										>
-											<span className="uppercase tracking-wider hidden group-hover:flex ">
+											{/* <span className="uppercase tracking-wider hidden group-hover:flex ">
 												{obj.title}{' '}
-											</span>{' '}
+											</span>{' '} */}
 											<FontAwesomeIcon icon={obj.icon} className="w-4 h-4" />
 										</Link>
 									</li>

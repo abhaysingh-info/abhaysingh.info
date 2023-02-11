@@ -32,7 +32,7 @@ export const ratings: IRating[] = [
 		profile_picture: '/clients/nragavendrarao24.webp',
 		name: 'nragavendrarao24',
 		message:
-			"He is such a talented guy. He had done my work within 2 hr's really amazing. I would to hire him again. ?",
+			"He is such a talented guy. He had done my work within 2 hr's really amazing. I would to hire him again.",
 		stars: 5,
 	},
 	{

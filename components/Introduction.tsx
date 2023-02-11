@@ -89,7 +89,7 @@ class Introduction extends React.Component<
 								<div className="bottom-animation">
 									<Link
 										className="btn gap-2 btn-accent btn-outline rounded-2xl"
-										href="/#page1"
+										href="/#about"
 									>
 										More about me{' '}
 										<FontAwesomeIcon

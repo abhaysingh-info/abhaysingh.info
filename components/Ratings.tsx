@@ -1,6 +1,4 @@
 import * as React from 'react'
-import RadialProgress from './utility/RadialProgress'
-import { CustomIntersectionObserver } from '../utils/IntersectionObserver'
 import FancyTitle from './utility/FancyTitle'
 import { IRating } from '../interfaces'
 import { ratings } from '../utils/data'
@@ -20,7 +18,14 @@ class Ratings extends React.Component<RatingsProps, RatingsState> {
 	render() {
 		return (
 			<div className="w-full min-h-screen relative overflow-hidden flex flex-col justify-center items-center">
-				<div className="carousel carousel-center w-full p-4 space-x-4 rounded-box">
+				<div className="text-3xl md:text-4xl lg:text-5xl">
+					<FancyTitle
+						title={['Reviews']}
+						backgroundTitle="Client Ratings"
+						primaryIndex={0}
+					/>
+				</div>
+				<div className="carousel carousel-center w-full p-10 space-y-14 space-x-10 rounded-box">
 					{this.state.ratings.map((obj, index) => (
 						<div className="carousel-item" key={index}>
 							<ClientRating rating={obj} />

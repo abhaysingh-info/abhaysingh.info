@@ -14,8 +14,8 @@ class FancyTitle extends React.Component<FancyTitleProps, FancyTitleState> {
 
 	render() {
 		return (
-			<div className="uppercase z-10 text-center relative">
-				<h1 className="cfont-extra-bold zoom-in-animation">
+			<div className="uppercase z-10 text-center relative cursor-pointer hover:scale-110">
+				<h2 className="cfont-extra-bold zoom-in-animation">
 					{this.props.title.map((title, index) => {
 						return (
 							<span
@@ -28,7 +28,7 @@ class FancyTitle extends React.Component<FancyTitleProps, FancyTitleState> {
 							</span>
 						)
 					})}
-				</h1>
+				</h2>
 				<div
 					className="background-about-title absolute text-6xl md:text-7xl lg:text-8xl right-0 left-0 top-0 bottom-0 flex items-center justify-center cfont-extra-bold tracking-widest opacity-5"
 					style={{ zIndex: -1, fontFamily: 'monospace' }}

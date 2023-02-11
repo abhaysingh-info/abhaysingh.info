@@ -42,7 +42,7 @@ class ClientRating extends React.Component<
 
 	render() {
 		return (
-			<div className="card w-72 md:w-96 bg-base-100 shadow-2xl">
+			<div className="card w-72 md:w-96 bg-base-100 shadow-2xl cursor-pointer hover:scale-105">
 				<figure className="flex justify-center items-center py-5">
 					<Image
 						src={this.state.rating.profile_picture}

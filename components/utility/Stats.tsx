@@ -12,7 +12,7 @@ class Stats extends React.Component<StatsProps, StatsState> {
 	state = {}
 	render() {
 		return (
-			<div className="card border border-gray-600 p-4 lg:py-6 lg:px-5">
+			<div className="card border border-gray-600 p-4 lg:py-6 lg:px-5 cursor-pointer hover:scale-105">
 				<div className="value text-5xl lg:text-6xl text-primary font-bold">
 					{this.props.statValue}
 					<sup>+</sup>{' '}
