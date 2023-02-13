@@ -6,7 +6,6 @@ import {
 	faMap,
 	faSquarePhone,
 } from '@fortawesome/free-solid-svg-icons'
-import { CustomIntersectionObserver } from '../utils/IntersectionObserver'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
 	faGithub,
@@ -70,7 +69,7 @@ class Contact extends React.Component<ContactProps, ContactState> {
 					/>
 				</div>
 				<div className="flex flex-col-reverse md:flex-row w-full gap-4 mt-10">
-					<div className="w-full md:w-1/2 max-w-lg  my-5 px-4 mx-auto">
+					<div className="w-full my-5 px-4 mx-auto">
 						<div className="text-center md:text-left title uppercase text-2xl tracking-wide font-bold left-animation">
 							don&apos;t be shy!
 						</div>
@@ -94,7 +93,7 @@ class Contact extends React.Component<ContactProps, ContactState> {
 						</div>
 					</div>
 					<div className="w-full md:w-1/2 max-w-lg  my-5 px-4 mx-auto">
-						<ContactForm />
+						{/* <ContactForm /> */}
 					</div>
 				</div>
 				<div className="w-full mt-4 flex justify-center gap-3 md:gap-5">
