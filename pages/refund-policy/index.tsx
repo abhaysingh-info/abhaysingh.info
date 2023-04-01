@@ -13,7 +13,7 @@ export default function RefundPolicy() {
 			<section className="prose mx-auto text-center py-16">
 				<h1>Refund Policy</h1>
 				<div>
-					<p>
+					<p className="text-justify">
 						NOTE: Whenever we use the word &quot;Product&quot;, &quot;Item&quot;
 						or &quot;Service&quot;, it means the product or service you have
 						purchased from us. it includes all tangible and in-tangible product
@@ -33,7 +33,7 @@ export default function RefundPolicy() {
 						<ul>
 							<li>We have started working on the project</li>
 							<li>6 days have been passed since you have placed your order</li>
-							<li>You</li>
+							{/* <li>You</li> */}
 						</ul>
 					</p>
 
