@@ -27,6 +27,7 @@ export default function Footer() {
 							href="https://instagram.com/abhaysingh.info"
 							className="mx-1 hover:underline"
 							target="_blank"
+							rel="noreferrer"
 						>
 							Abhay Singh
 						</a>
