@@ -14,7 +14,7 @@ export default function RefundPolicy() {
 				<h1>Refund Policy</h1>
 				<div>
 					<p>
-						NOTE: Whenever we use the word &quot;Product`&uot;, &quot;Item&quot;
+						NOTE: Whenever we use the word &quot;Product&quot;, &quot;Item&quot;
 						or &quot;Service&quot;, it means the product or service you have
 						purchased from us. it includes all tangible and in-tangible product
 						or service that we provide.
