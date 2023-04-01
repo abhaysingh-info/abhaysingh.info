@@ -14,16 +14,18 @@ export default function RefundPolicy() {
 				<h1>Refund Policy</h1>
 				<div>
 					<p>
-						NOTE: Whenever we use the word "Product", "Item" or "Service", it
-						means the product or service you have purchased from us. it includes
-						all tangible and in-tangible product or service that we provide.
+						NOTE: Whenever we use the word &quot;Product`&uot;, &quot;Item&quot;
+						or &quot;Service&quot;, it means the product or service you have
+						purchased from us. it includes all tangible and in-tangible product
+						or service that we provide.
 					</p>
 				</div>
 				<div>
 					<h2>Returns</h2>
 					<p className="text-justify">
 						Our policy lasts 10 days. If 10 days have gone by since your
-						purchase, unfortunately we can't offer you a refund or exchange.
+						purchase, unfortunately we can&apos;t offer you a refund or
+						exchange.
 					</p>
 					<p className="text-justify">
 						You will will not get full-refund if any of the below mentioned
@@ -86,8 +88,8 @@ export default function RefundPolicy() {
 				<div>
 					<h2>Late or missing refunds</h2>
 					<p className="text-justify">
-						If you haven't received a refund yet, first check your bank account
-						again.
+						If you haven&apos;t received a refund yet, first check your bank
+						account again.
 					</p>
 
 					<p className="text-justify">
@@ -101,7 +103,7 @@ export default function RefundPolicy() {
 					</p>
 
 					<p className="text-justify">
-						If you've done all of this and you still have not received your
+						If you&apos;ve done all of this and you still have not received your
 						refund yet, please contact us at {email}.
 					</p>
 				</div>
@@ -109,12 +111,12 @@ export default function RefundPolicy() {
 					<h2>Gifts</h2>
 					<p className="text-justify">
 						If the item was marked as a gift when purchased and shipped directly
-						to you, you'll receive a gift credit for the value of your return.
-						Once the returned item is received, a gift certificate will be
-						mailed to you.
+						to you, you&apos;ll receive a gift credit for the value of your
+						return. Once the returned item is received, a gift certificate will
+						be mailed to you.
 					</p>
 					<p className="text-justify">
-						If the item wasn't marked as a gift when purchased, or the gift
+						If the item wasn&apos;t marked as a gift when purchased, or the gift
 						giver had the order shipped to themselves to give to you later, we
 						will send a refund to the gift giver and he will find out about your
 						return.
@@ -138,7 +140,7 @@ export default function RefundPolicy() {
 					<p className="text-justify">
 						If you are shipping an item over $75, you should consider using a
 						trackable shipping service or purchasing shipping insurance. We
-						don't guarantee that we will receive your returned item.
+						don&apos;t guarantee that we will receive your returned item.
 					</p>
 				</div>
 			</section>

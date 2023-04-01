@@ -13,21 +13,21 @@ export default function TermsAndConditions() {
 					<h2>OVERVIEW</h2>
 					<p className="text-justify">
 						This website is operated by {companysName}. Throughout the site, the
-						terms “we”, “us” and “our” refer to {companysName}. {companysName}{' '}
-						offers this website, including all information, tools and services
-						available from this site to you, the user, conditioned upon your
-						acceptance of all terms, conditions, policies and notices stated
-						here.
+						terms &quot;we&quot;, &quot;us&quot; and &quot;our&quot; refer to{' '}
+						{companysName}. {companysName} offers this website, including all
+						information, tools and services available from this site to you, the
+						user, conditioned upon your acceptance of all terms, conditions,
+						policies and notices stated here.
 					</p>
 					<p className="text-justify">
 						By visiting our site and/ or purchasing something from us, you
-						engage in our “Service” and agree to be bound by the following terms
-						and conditions (“Terms of Service”, “Terms”), including those
-						additional terms and conditions and policies referenced herein
-						and/or available by hyperlink. These Terms of Service apply to all
-						users of the site, including without limitation users who are
-						browsers, vendors, customers, merchants, and/ or contributors of
-						content.
+						engage in our &quot;Service&quot; and agree to be bound by the
+						following terms and conditions (&quot;Terms of Service&quot;,
+						&quot;Terms&quot;), including those additional terms and conditions
+						and policies referenced herein and/or available by hyperlink. These
+						Terms of Service apply to all users of the site, including without
+						limitation users who are browsers, vendors, customers, merchants,
+						and/ or contributors of content.
 					</p>
 					<p className="text-justify">
 						Please read these Terms of Service carefully before accessing or
@@ -197,11 +197,11 @@ export default function TermsAndConditions() {
 						neither monitor nor have any control nor input.
 					</p>
 					<p className="text-justify">
-						You acknowledge and agree that we provide access to such tools ”as
-						is” and “as available” without any warranties, representations or
-						conditions of any kind and without any endorsement. We shall have no
-						liability whatsoever arising from or relating to your use of
-						optional third-party tools.
+						You acknowledge and agree that we provide access to such tools
+						&quot;as is&quot; and &quot;as available&quot; without any
+						warranties, representations or conditions of any kind and without
+						any endorsement. We shall have no liability whatsoever arising from
+						or relating to your use of optional third-party tools.
 					</p>
 					<p className="text-justify">
 						Any use by you of optional tools offered through the site is
@@ -234,10 +234,10 @@ export default function TermsAndConditions() {
 						We are not liable for any harm or damages related to the purchase or
 						use of goods, services, resources, content, or any other
 						transactions made in connection with any third-party websites.
-						Please review carefully the third-party's policies and practices and
-						make sure you understand them before you engage in any transaction.
-						Complaints, claims, concerns, or questions regarding third-party
-						products should be directed to the third-party.
+						Please review carefully the third-party&apos;s policies and
+						practices and make sure you understand them before you engage in any
+						transaction. Complaints, claims, concerns, or questions regarding
+						third-party products should be directed to the third-party.
 					</p>
 				</div>
 				<div>
@@ -247,18 +247,18 @@ export default function TermsAndConditions() {
 						example contest entries) or without a request from us you send
 						creative ideas, suggestions, proposals, plans, or other materials,
 						whether online, by email, by postal mail, or otherwise
-						(collectively, 'comments'), you agree that we may, at any time,
-						without restriction, edit, copy, publish, distribute, translate and
-						otherwise use in any medium any comments that you forward to us. We
-						are and shall be under no obligation (1) to maintain any comments in
-						confidence; (2) to pay compensation for any comments; or (3) to
-						respond to any comments
+						(collectively, &apos;comments&apos;), you agree that we may, at any
+						time, without restriction, edit, copy, publish, distribute,
+						translate and otherwise use in any medium any comments that you
+						forward to us. We are and shall be under no obligation (1) to
+						maintain any comments in confidence; (2) to pay compensation for any
+						comments; or (3) to respond to any comments
 					</p>
 					<p className="text-justify">
 						We may, but have no obligation to, monitor, edit or remove content
 						that we determine in our sole discretion are unlawful, offensive,
 						threatening, libelous, defamatory, pornographic, obscene or
-						otherwise objectionable or violates any party's intellectual
+						otherwise objectionable or violates any party&apos;s intellectual
 						property or these Terms of Service.
 					</p>
 					<p className="text-justify">
@@ -350,11 +350,12 @@ export default function TermsAndConditions() {
 						You expressly agree that your use of, or inability to use, the
 						service is at your sole risk. The service and all products and
 						services delivered to you through the service are (except as
-						expressly stated by us) provided 'as is' and 'as available' for your
-						use, without any representation, warranties or conditions of any
-						kind, either express or implied, including all implied warranties or
-						conditions of merchantability, merchantable quality, fitness for a
-						particular purpose, durability, title, and non-infringement.
+						expressly stated by us) provided &apos;as is&apos; and &apos;as
+						available&apos; for your use, without any representation, warranties
+						or conditions of any kind, either express or implied, including all
+						implied warranties or conditions of merchantability, merchantable
+						quality, fitness for a particular purpose, durability, title, and
+						non-infringement.
 					</p>
 					<p className="text-justify">
 						In no case shall {companysName}, our directors, officers, employees,
@@ -385,10 +386,10 @@ export default function TermsAndConditions() {
 						our parent, subsidiaries, affiliates, partners, officers, directors,
 						agents, contractors, licensors, service providers, subcontractors,
 						suppliers, interns and employees, harmless from any claim or demand,
-						including reasonable attorneys' fees, made by any third-party due to
-						or arising out of your breach of these Terms of Service or the
-						documents they incorporate by reference, or your violation of any
-						law or the rights of a third-party.
+						including reasonable attorneys&apos; fees, made by any third-party
+						due to or arising out of your breach of these Terms of Service or
+						the documents they incorporate by reference, or your violation of
+						any law or the rights of a third-party.
 					</p>
 				</div>
 				<div>

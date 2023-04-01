@@ -13,7 +13,7 @@ export default function PrivacyPolicy() {
 						When you purchase something from our store, as part of the buying
 						and selling process, we collect the personal information you give us
 						such as your name, address and email address. When you browse our
-						store, we also automatically receive your computer's internet
+						store, we also automatically receive your computer&apos;s internet
 						protocol (IP) address in order to provide us with information that
 						helps us learn about your browser and operating system. Email
 						marketing (if applicable): With your permission, we may send you
@@ -72,7 +72,7 @@ export default function PrivacyPolicy() {
 					<p className="text-justify">
 						For more insight, you may also want to read terms and conditions of
 						razorpay on{' '}
-						<a href="https://razorpay.com" target="_blank">
+						<a href="https://razorpay.com" target="_blank" rel="noreferrer">
 							Razorpay
 						</a>
 					</p>
@@ -104,9 +104,9 @@ export default function PrivacyPolicy() {
 						which that service provider or its facilities are located.
 					</p>
 					<p className="text-justify">
-						Once you leave our store's website or are redirected to a
+						Once you leave our store&apos;s website or are redirected to a
 						third-party website or application, you are no longer governed by
-						this Privacy Policy or our website's Terms of Service.
+						this Privacy Policy or our website&apos;s Terms of Service.
 					</p>
 				</div>
 				<div>
@@ -121,8 +121,8 @@ export default function PrivacyPolicy() {
 				<div>
 					<h2>COOKIES</h2>
 					<p className="text-justify">
-						Here is a list of cookies that we use. We've listed them here so you
-						that you can choose if you want to opt-out of cookies or not.
+						Here is a list of cookies that we use. We&apos;ve listed them here
+						so you that you can choose if you want to opt-out of cookies or not.
 					</p>
 				</div>
 				<div>
