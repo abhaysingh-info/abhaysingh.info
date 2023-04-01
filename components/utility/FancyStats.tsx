@@ -27,7 +27,7 @@ class FancyStats extends React.Component<FancyStatsProps, FancyStatsState> {
 					{this.props.statsKey}
 				</div>
 				<div
-					className="stat-value text-sm break-all whitespace-normal normal-case"
+					className="stat-value text-sm break-word whitespace-normal normal-case"
 					style={{ gridColumnStart: '2' }}
 				>
 					{this.props.statsValue}

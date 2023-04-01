@@ -26,7 +26,8 @@ class Contact extends React.Component<ContactProps, ContactState> {
 			{
 				icon: faMap,
 				statsKey: 'address',
-				statsValue: 'Wadgaonsheri, Pune, Maharashtra, India',
+				statsValue:
+					'Flat no 18, Digambar prem society, Wadgaonsheri, Pune, Maharashtra, India, 411014',
 			},
 			{
 				icon: faEnvelopeOpen,
