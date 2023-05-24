@@ -158,7 +158,7 @@ export default function Layout({
 					)}
 				</ul>
 			</nav>
-			<div className="absolute right-0 mt-3 mr-6 z-50">
+			{/* <div className="absolute right-0 mt-3 mr-6 z-50">
 				<span
 					onClick={() => {
 						toggleTheme(theme === 'dark' ? 'light' : 'dark')
@@ -171,7 +171,7 @@ export default function Layout({
 					/>{' '}
 					<span className="hidden">toggle theme</span>
 				</span>
-			</div>
+			</div> */}
 			<main>{children}</main>
 			<Footer />
 		</>
