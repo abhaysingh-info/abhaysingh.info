@@ -32,7 +32,7 @@ class Contact extends React.Component<ContactProps, ContactState> {
 			{
 				icon: faEnvelopeOpen,
 				statsKey: 'mail me',
-				statsValue: 'abhay1029singh@gmail.com',
+				statsValue: 'me@abhaysingh.info',
 			},
 			{
 				icon: faSquarePhone,
