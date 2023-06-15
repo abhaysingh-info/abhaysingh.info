@@ -29,6 +29,13 @@ export const ratings: IRating[] = [
 		stars: 5,
 	},
 	{
+		profile_picture: '/clients/default.webp',
+		name: 'Akshay Chavanda',
+		message:
+			'Excellent work and very helpful! He was very communicative and FAST! I will absolutely use his services again and am incredibly appreciate of the quick responses and turn around time.',
+		stars: 5,
+	},
+	{
 		profile_picture: '/clients/nragavendrarao24.webp',
 		name: 'nragavendrarao24',
 		message:

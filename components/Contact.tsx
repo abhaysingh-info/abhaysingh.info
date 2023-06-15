@@ -27,18 +27,18 @@ class Contact extends React.Component<ContactProps, ContactState> {
 				icon: faMap,
 				statsKey: 'address',
 				statsValue:
-					'Flat no 18, Digambar prem society, Wadgaonsheri, Pune, Maharashtra, India, 411014',
+					'Pune, Maharashtra, India, 411014',
 			},
 			{
 				icon: faEnvelopeOpen,
 				statsKey: 'mail me',
 				statsValue: 'me@abhaysingh.info',
 			},
-			{
-				icon: faSquarePhone,
-				statsKey: 'call me',
-				statsValue: '+91 81888-79901',
-			},
+			// {
+			// 	icon: faSquarePhone,
+			// 	statsKey: 'call me',
+			// 	statsValue: '+91 81888-79901',
+			// },
 		],
 		social: [
 			{
