@@ -1,4 +1,4 @@
-import { IRating } from '../interfaces'
+import { IRating } from './interfaces'
 
 export const ratings: IRating[] = [
 	{
